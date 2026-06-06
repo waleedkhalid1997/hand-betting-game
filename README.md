@@ -57,12 +57,3 @@ src/
 - **Tile extensibility**: Adding a new tile type is one array entry in `constants/tiles.js`. Value behaviour is determined by whether the tile ID is in `DYNAMIC_TILE_IDS` — no switch statements scattered through the codebase.
 - **CSS Modules**: Every component has its own `.module.css`. Global tokens live in `styles/global.css`.
 
----
-
-## AI Usage
-
-This project was built with AI assistance (Claude):
-- **AI-assisted**: initial scaffold, component structure, CSS styling, game engine logic
-- **Human-reviewed and adapted**: architecture decisions, extensibility patterns, state management approach, bug fixes, and overall code organization were guided and verified by the developer
-
-All code was reviewed, understood, and intentionally structured for the onsite extension exercise.
