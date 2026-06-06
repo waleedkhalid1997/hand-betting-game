@@ -1,0 +1,109 @@
+/* ═══════════════════════════════════════════
+   GLOBAL STYLES — Hand Betting Game
+   ═══════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&display=swap');
+
+/* ── Design Tokens ── */
+:root {
+  --bg:           #0e0c0a;
+  --bg2:          #1a1712;
+  --bg3:          #252118;
+  --surface:      #2e2a22;
+  --surface2:     #3a3428;
+
+  --gold:         #c9a84c;
+  --gold-light:   #e8c87a;
+  --gold-dark:    #8a6e2a;
+
+  --jade:         #3a8c5c;
+  --jade-light:   #5ab87c;
+
+  --red:          #c23b22;
+  --red-light:    #e05a40;
+
+  --text:         #f0e8d0;
+  --text-muted:   #8a7e68;
+  --text-dim:     #5a5040;
+
+  --border:       rgba(201,168,76,0.18);
+  --border-strong:rgba(201,168,76,0.44);
+
+  --tile-bg:      #f5f0e8;
+  --tile-border:  #d4c89a;
+
+  --font-display: 'DM Serif Display', serif;
+  --font-body:    'DM Mono', monospace;
+}
+
+/* ── Reset ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Screen fade-in ── */
+@keyframes screenFade {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Shared button styles ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  padding: 0.72rem 1.85rem;
+  border: 1px solid var(--border-strong);
+  background: transparent;
+  color: var(--gold);
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.18s, border-color 0.18s, color 0.18s;
+  border-radius: 2px;
+  white-space: nowrap;
+}
+
+.btn:hover:not(:disabled) {
+  background: rgba(201,168,76,0.1);
+  border-color: var(--gold);
+}
+
+.btn:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.btn-primary {
+  background: var(--gold);
+  color: var(--bg);
+  border-color: var(--gold);
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: var(--gold-light);
+  border-color: var(--gold-light);
+}
+
+.btn-danger {
+  border-color: var(--red);
+  color: var(--red-light);
+}
+
+.btn-danger:hover:not(:disabled) {
+  background: rgba(194,59,34,0.14);
+  border-color: var(--red-light);
+}

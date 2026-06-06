@@ -1,0 +1,103 @@
+.screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: radial-gradient(ellipse at 50% 30%, #1e1a10 0%, var(--bg) 70%);
+  position: relative;
+  overflow: hidden;
+}
+
+.screen::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(0deg,  transparent, transparent 39px, rgba(201,168,76,0.04) 40px),
+    repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(201,168,76,0.04) 40px);
+  pointer-events: none;
+}
+
+.inner {
+  text-align: center;
+  z-index: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.deco {
+  font-size: 2.8rem;
+  margin-bottom: 1.25rem;
+  letter-spacing: 0.5rem;
+  opacity: 0.88;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 3.6rem;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+
+.titleMuted { color: var(--text); }
+
+.sub {
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-bottom: 2.5rem;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  align-items: center;
+  width: 220px;
+}
+
+.actions .btn { width: 100%; }
+
+.leaderboard {
+  margin-top: 2.5rem;
+  width: 320px;
+  animation: slideDown 0.25s ease;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.sectionTitle {
+  font-size: 0.62rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+  margin-bottom: 0.85rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.5rem;
+}
+
+.lbRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.45rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  font-size: 0.82rem;
+}
+
+.rank  { color: var(--text-muted); width: 1.75rem; }
+.name  { flex: 1; padding: 0 0.75rem; text-align: left; }
+.score { color: var(--gold); }
+
+.empty {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  padding: 1rem 0;
+}

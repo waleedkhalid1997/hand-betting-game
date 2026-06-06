@@ -1,0 +1,70 @@
+.screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+.card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  padding: 3rem 2.5rem;
+  width: 420px;
+  text-align: center;
+  animation: fadeUp 0.35s ease;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.heading {
+  font-family: var(--font-display);
+  font-size: 2.6rem;
+  color: var(--gold);
+  margin-bottom: 0.2rem;
+}
+
+.sub {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 1.75rem;
+}
+
+.scoreBig {
+  font-family: var(--font-display);
+  font-size: 4.5rem;
+  color: var(--gold);
+  line-height: 1;
+}
+
+.scoreBigLabel {
+  font-size: 0.62rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+  margin-bottom: 1.75rem;
+}
+
+.reason {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  padding: 0.8rem 1.1rem;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  margin-bottom: 2rem;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  align-items: center;
+}

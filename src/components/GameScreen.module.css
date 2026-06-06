@@ -1,0 +1,130 @@
+.screen {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+/* ── Header ── */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg2);
+  flex-shrink: 0;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.playerBlock { display: flex; flex-direction: column; gap: 2px; }
+.playerLabel { font-size: 0.6rem; color: var(--text-muted); letter-spacing: 0.15em; text-transform: uppercase; }
+.playerName  { font-size: 0.95rem; color: var(--gold); font-weight: 600; }
+
+.reshuffleDots { display: flex; gap: 5px; margin-top: 4px; }
+.dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  transition: background 0.3s;
+}
+.dotUsed { background: var(--red); border-color: var(--red); }
+
+.deckInfo    { display: flex; gap: 1.5rem; }
+.deckStat    { display: flex; flex-direction: column; align-items: center; gap: 1px; }
+.deckVal     { font-size: 1.05rem; color: var(--text); font-weight: 500; }
+.deckLabel   { font-size: 0.62rem; color: var(--text-muted); letter-spacing: 0.1em; text-transform: uppercase; }
+
+.scoreBlock  { display: flex; flex-direction: column; align-items: flex-end; gap: 1px; }
+.scoreLabel  { font-size: 0.62rem; color: var(--text-muted); letter-spacing: 0.1em; text-transform: uppercase; }
+.scoreVal    { font-size: 1.1rem; color: var(--gold); font-weight: 500; }
+
+/* ── Arena ── */
+.arena {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.5rem;
+  gap: 2rem;
+}
+
+.warning {
+  background: rgba(194,59,34,0.1);
+  border: 1px solid rgba(194,59,34,0.28);
+  border-radius: 3px;
+  padding: 0.45rem 1.25rem;
+  font-size: 0.7rem;
+  color: var(--red-light);
+  text-align: center;
+  max-width: 480px;
+}
+
+/* ── Hand ── */
+.handSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.handLabel {
+  font-size: 0.62rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.tilesRow {
+  display: flex;
+  gap: 0.7rem;
+}
+
+.handTotal {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  color: var(--gold);
+  line-height: 1;
+}
+
+.handTotalLabel {
+  font-size: 0.62rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-top: -0.4rem;
+}
+
+/* ── Bet ── */
+.betSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.betPrompt {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.betButtons { display: flex; gap: 1rem; }
+
+.btnBet {
+  width: 124px;
+  height: 50px;
+  font-size: 0.82rem;
+  letter-spacing: 0.12em;
+}
+
+.btnHigher { border-color: var(--jade);  color: var(--jade-light); }
+.btnHigher:hover:not(:disabled) { background: rgba(58,140,92,0.14); }
+
+.btnLower  { border-color: var(--red);   color: var(--red-light); }
+.btnLower:hover:not(:disabled) { background: rgba(194,59,34,0.14); }
+
+.btnBet:disabled { opacity: 0.4; cursor: not-allowed; }

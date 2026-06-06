@@ -1,0 +1,43 @@
+.banner {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--bg2);
+  border: 1px solid var(--border-strong);
+  border-radius: 4px;
+  padding: 1.25rem 3rem;
+  text-align: center;
+  z-index: 200;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  animation: bannerIn 0.28s cubic-bezier(0.34, 1.2, 0.64, 1),
+             bannerOut 0.28s ease 1.2s forwards;
+}
+
+@keyframes bannerIn {
+  from { opacity: 0; transform: translate(-50%, -58%) scale(0.88); }
+  to   { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+}
+@keyframes bannerOut {
+  to { opacity: 0; transform: translate(-50%, -44%) scale(0.94); }
+}
+
+.win  { border-color: var(--jade); }
+.lose { border-color: var(--red); }
+
+.label {
+  font-family: var(--font-display);
+  font-size: 1.9rem;
+  line-height: 1;
+}
+.win  .label { color: var(--jade-light); }
+.lose .label { color: var(--red-light); }
+
+.values {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  letter-spacing: 0.15em;
+}
